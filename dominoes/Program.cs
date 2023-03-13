@@ -4,11 +4,11 @@
     private int faceDown;
     private int total;
     
-        public Domino(int _faceUp,int _faceDown, int t=0)
+        public Domino(int _faceUp,int _faceDown, int _total=0)
     {
         this.faceUp = _faceUp;
         this.faceDown = _faceDown;
-        this.total = t;
+        this.total = _total;
     }
     public static Domino operator + (Domino a,Domino b)
     {
