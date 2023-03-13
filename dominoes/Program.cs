@@ -2,21 +2,25 @@
 {
     private int faceUp;
     private int faceDown;
-        public Domino(int _faceUp,int _faceDown)
+    private int total;
+    
+        public Domino(int _faceUp,int _faceDown, int t=0)
     {
         this.faceUp = _faceUp;
         this.faceDown = _faceDown;
+        this.total = t;
     }
     public static Domino operator + (Domino a,Domino b)
     {
         int den= a.faceDown + b.faceDown;
         int num= a.faceUp + b.faceUp;
-        return new Domino (num,den);
+        int total = den+num;
+        return new Domino (den,num,total);
     }
 
     public void Print_()
     {
-        Console.WriteLine(faceUp+faceDown);
+        Console.WriteLine(total);
     }
 }
 internal class Program
